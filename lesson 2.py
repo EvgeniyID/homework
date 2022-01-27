@@ -131,6 +131,3 @@ for el in my_list:
         else:
          analitic[list_1] = [list_2]
 print(analitic)
-
-
-
