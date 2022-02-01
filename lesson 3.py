@@ -2,15 +2,15 @@
 #Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 
-#def my_func (x, y):
-#    try:
-#        z = x / y
-#        return z
-#    except ZeroDivisionError:
-#        return "y не может быть равен 0"
-#    except ValueError:
-#        return "Для ввода принимаются только числа"
-#print(my_func(int(input("Введите x = ")), int(input("Введите y = "))))
+def my_func (x, y):
+    try:
+        z = x / y
+        return z
+    except ZeroDivisionError:
+        return "y не может быть равен 0"
+    except ValueError:
+        return "Для ввода принимаются только числа"
+print(my_func(int(input("Введите x = ")), int(input("Введите y = "))))
 
 #Задание 2
 #Выполнить функцию, которая принимает несколько параметров,
@@ -18,51 +18,51 @@
 # Функция должна принимать параметры как именованные аргументы.
 # Осуществить вывод данных о пользователе одной строкой.
 
-#def my_func(name, surname, byear, city, email, phone):
-#    print(name, surname, byear, city, email, phone)
-#
-#my_func(name= 'Евгений', surname='Демидов', byear=1993, city='Санкт-Петербург', email='email', phone='1234556')
+def my_func(name, surname, byear, city, email, phone):
+    print(name, surname, byear, city, email, phone)
+
+my_func(name= 'Евгений', surname='Демидов', byear=1993, city='Санкт-Петербург', email='email', phone='1234556')
 
 #Задание 3
 #Реализовать функцию my_func(), которая принимает три позиционных аргумента
 # и возвращает сумму наибольших двух аргументов.
 
-#def my_func(x, y, z):
-#    a = [x, y, z]
-#    max_1 = max(a)
-#    a.remove(max_1)
-#    max_2 = max(a)
-#    print(max_1 + max_2)
-#my_func(6, 2, 0)
+def my_func(x, y, z):
+    a = [x, y, z]
+    max_1 = max(a)
+    a.remove(max_1)
+    max_2 = max(a)
+    print(max_1 + max_2)
+my_func(6, 2, 0)
 
 #Задание 4
 #Программа принимает действительное положительное число x и целое отрицательное число y.
 # Выполните возведение числа x в степень y. Задание реализуйте в виде функции my_func(x, y).
 # При решении задания нужно обойтись без встроенной функции возведения числа в степень.
 
-#def my_func(x, y):
-#    try:
-#        return 1 / x ** abs(y)
-#    except:
-#        return 'Infinity'
-#print(my_func(0, -2))
+def my_func(x, y):
+    try:
+        return 1 / x ** abs(y)
+    except:
+        return 'Infinity'
+print(my_func(0, -2))
 
-#def my_func(x, y):
-#    try:
-#       return x ** y
-#    except:
-#       return 'Infinity'
-#print(my_func(4, -5))
+def my_func(x, y):
+    try:
+       return x ** y
+    except:
+       return 'Infinity'
+print(my_func(4, -5))
 
-#def my_func(x, y):
-#    try:
-#        a = 1
-#        for i in range (abs(y)):
-#            a *= 1/x
-#        return a
-#    except:
-#        return 'Infinity'
-#print(my_func(0, 0))
+def my_func(x, y):
+    try:
+        a = 1
+        for i in range (abs(y)):
+            a *= 1/x
+        return a
+    except:
+        return 'Infinity'
+print(my_func(0, 0))
 
 #Задание 5
 #Программа запрашивает у пользователя строку чисел, разделённых пробелом.
@@ -73,20 +73,20 @@
 # Если специальный символ введён после нескольких чисел,
 # то вначале нужно добавить сумму этих чисел к полученной ранее сумме и после этого завершить программу.
 
-#result = 0
-#while True:
-#    a = input ('Введите числа через пробел или q для выхода: ')
-#    b = a.split()
-#    for i in b:
-#        try:
-#            n = float(i)
-#            result +=n
-#       except:
-#            if i == 'q':
-#                print(f"Сумма числет равна {result}. Программа окончена")
-#                exit(0)
-#   print (result)
-#exit()
+result = 0
+while True:
+    a = input ('Введите числа через пробел или q для выхода: ')
+    b = a.split()
+    for i in b:
+        try:
+            n = float(i)
+            result +=n
+       except:
+            if i == 'q':
+                print(f"Сумма числет равна {result}. Программа окончена")
+                exit(0)
+   print (result)
+exit()
 
 #Задание 6,7
 #Реализовать функцию int_func(), принимающую слова из маленьких латинских букв и
@@ -99,21 +99,21 @@
 
 
 
-#def int_func (a):
-#    return a.title()
-#print(int_func("text text trend"))
+def int_func (a):
+    return a.title()
+print(int_func("text text trend"))
 
 #или
 
-#def int_func (a):
-#    words = a.split()
-#    text = []
-#    for i in words:
-#        s = str(i)
-#        first = s[:1].upper()
-#        word = first + s[1:]
-#        text.append(word)
-#    return text
-#print(int_func("text text trend"))
+def int_func (a):
+    words = a.split()
+    text = []
+    for i in words:
+        s = str(i)
+        first = s[:1].upper()
+        word = first + s[1:]
+        text.append(word)
+    return text
+print(int_func("text text trend"))
 
 
